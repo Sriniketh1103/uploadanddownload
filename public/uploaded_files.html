@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uploaded Files</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+  <style>
+   body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('uploaded_files.jpg'); /* Add your background image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #333;
+    }
+
+    /* Your existing CSS styles */
+
+    .file-label {
+      display: block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .file-label:hover {
+      background-color: #0056b3;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    ul#fileList {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+   
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      min-width: 400px; /* Adjust the width as per your preference */
+      text-align: left;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    li::after {
+      content: attr(data-file-name); /* Use the 'data-file-name' attribute to display the file name */
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      font-size: 14px;
+      margin-left: auto; /* Add margin-left auto to push the button to the right */
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+   button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    
+    /* Add some color to the download button */
+   
+  </style>
+</head>
+
+<body>
+  <h1>Uploaded Files</h1>
+ 
+  <ul id="fileList">
+    <!-- File names will be dynamically added here -->
+  </ul>
+
+  <script src="uploaded_files.js"></script>
+</body>
+
+</html>
